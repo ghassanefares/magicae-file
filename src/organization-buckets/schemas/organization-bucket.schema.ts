@@ -1,8 +1,8 @@
 import { StorageType } from '../interface/organization-bucket.interface';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
+import { Document } from 'mongoose';
 
-export type OrganizationBucketDocument = HydratedDocument<OrganizationBucket>;
+export type OrganizationBucketDocument = OrganizationBucket & Document;
 
 @Schema()
 export class OrganizationBucket {
